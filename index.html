@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        text-align: center;
+        color: white;
+      }
+      .row div {
+        min-height: 80px;
+        border: 1px solid yellow;
+        background-color: black;
+      }
+      .row div:nth-child(4n) {
+        background-color: green;
+      }
+      .row div:nth-child(4n+1) {
+        background-color: blue;
+      }
+      .row div:nth-child(4n+2) {
+        background-color: red;
+      }
+      .row .row {
+        margin: 10px;
+      }
+      
+    </style>
+
+    <title>Адаптивная разметка на Bootstrap</title>
+  </head>
+  <body>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-12 order-1 col-sm-12 col-md-3 col-lg-12">1</div>
+        <div class="col-12 order-2 d-sm-none d-md-block col-md-8 order-md-2 col-lg-6 order-lg-3">2
+          <div class="row d-none d-lg-flex">
+            <div class="col-lg-2">2.1</div>
+            <div class="col-lg-8">2.2</div>
+            <div class="col-lg-2">2.3</div>
+            <div class="col-lg-2">2.4</div>
+            <div class="d-none d-md-none d-lg-block col-lg-10">2.5</div>
+            <div class="d-none d-md-none d-lg-block col-lg-8">2.6</div>
+            <div class="d-none d-md-none d-lg-block col-lg-4">2.7</div>
+          </div>  
+        </div>
+        <div class="col-12 order-3 d-sm-none d-md-block col-md-1 order-md-3 col-lg-6 order-lg-2">3</div>
+        <div class="col-12 order-4 col-sm-4 order-sm-2 col-md-4 order-md-4 col-lg-5 order-lg-6">4</div>
+        <div class="col-12 order-5 col-sm-8 order-sm-3 col-md-4 offset-md-4 order-md-5 offset-lg-0 col-lg-2 order-lg-4"><span class="d-lg-none">5</span><span class="d-none d-lg-inline">Кликни меня</span></div>
+        <div class="col-12 order-6 col-sm-8 order-sm-4 col-md-5 order-md-6 col-lg-2 order-lg-5">6</div>
+        <div class="col-12 order-7 d-sm-none d-md-block col-md-3 offset-md-1 order-md-7 offset-lg-0 col-lg-1 order-lg-7">7</div>
+        <div class="col-12 order-8 col-sm-2 order-sm-5 offset-sm-2 col-md-1 offset-md-2 order-md-8 offset-lg-0 col-lg-2 order-lg-8">8</div>
+      </div>
+    </div>
+  </body>
+</html>
